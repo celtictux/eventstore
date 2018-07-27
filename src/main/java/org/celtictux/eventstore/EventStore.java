@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @Controller
-@RestController
+@RestController("/")
 public class EventStore {
 
     @RequestMapping("/hello")

@@ -4,10 +4,7 @@ import org.celtictux.eventstore.dao.Event;
 import org.celtictux.eventstore.dao.MemberType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -20,18 +17,19 @@ public class EventStore {
     @Autowired
     private EventRepository repository;
 
-    @RequestMapping("/hello")
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String index() {
         return "Greetings the Events Endpoint, built on Spring Boot!";
     }
 
-    @RequestMapping("/getAllEvents")
+    @RequestMapping(value = "/getAllEvents", method = RequestMethod.GET)
     public Collection<Event> getAllEvents() {
         return repository.findAll();
     }
 
     @RequestMapping(value = "/addEvent", method = RequestMethod.POST)
-    public void addEvent(final String eventName, final String eventLocation) {
+    public void addEvent(@PathVariable("eventName")  final String eventName,
+                         @PathVariable("eventLocation") final String eventLocation) {
         Event event = new Event();
         event.setEventName(eventName);
         event.setEventLocation(eventLocation);

@@ -28,8 +28,8 @@ public class EventStore {
     }
 
     @RequestMapping(value = "/addEvent", method = RequestMethod.GET)
-    public void addEvent(@PathVariable("eventName") final String eventName,
-                         @PathVariable("eventLocation") final String eventLocation) {
+    public void addEvent(@RequestParam final String eventName,
+                         @RequestParam final String eventLocation) {
         Event event = new Event();
         event.setEventName(eventName);
         event.setEventLocation(eventLocation);

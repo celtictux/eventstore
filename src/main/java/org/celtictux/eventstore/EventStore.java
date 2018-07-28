@@ -4,7 +4,9 @@ import org.celtictux.eventstore.dao.Event;
 import org.celtictux.eventstore.dao.MemberType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Collection;
@@ -28,7 +30,7 @@ public class EventStore {
         return repository.findAll();
     }
 
-    @RequestMapping("/addEvent")
+    @RequestMapping("/addEvent", method = RequestMethod.POST)
     public void addEvent(final String eventName, final String eventLocation) {
         Event event = new Event();
         event.setEventName(eventName);

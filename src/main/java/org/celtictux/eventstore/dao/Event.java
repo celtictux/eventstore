@@ -12,9 +12,7 @@ public class Event {
     public String id;
 
     public String eventName;
-    public String eventLocationNumber;
-    public String eventLocationRoad;
-    public String eventLocationCounty;
+    public String eventLocation;
 
     public Map<MemberType, Integer> eventRequirements;
 

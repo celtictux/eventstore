@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Collection;
 
 @Controller
-@RestController("/events")
+@RestController("events")
 public class EventStore {
 
     @Autowired

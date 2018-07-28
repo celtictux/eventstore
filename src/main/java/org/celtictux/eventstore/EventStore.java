@@ -27,7 +27,7 @@ public class EventStore {
         return repository.findAll();
     }
 
-    @RequestMapping(value = "/addEvent", method = RequestMethod.POST)
+    @RequestMapping(value = "/addEvent", method = RequestMethod.GET)
     public void addEvent(@PathVariable("eventName") final String eventName,
                          @PathVariable("eventLocation") final String eventLocation) {
         Event event = new Event();

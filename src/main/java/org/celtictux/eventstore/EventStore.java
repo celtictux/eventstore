@@ -20,7 +20,7 @@ public class EventStore {
         return "Greetings from Spring Boot!";
     }
 
-    @RequestMapping("/hello")
+    @RequestMapping("/getAllEvents")
     public Collection<Event> getAllEvents() {
         return repository.findAll();
     }

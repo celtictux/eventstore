@@ -1,0 +1,5 @@
+org/celtictux/eventstore/Application.class
+org/celtictux/eventstore/dao/MemberType.class
+org/celtictux/eventstore/EventStore.class
+org/celtictux/eventstore/EventRepository.class
+org/celtictux/eventstore/dao/Event.class

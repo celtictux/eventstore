@@ -30,7 +30,7 @@ public class EventStore {
         return repository.findAll();
     }
 
-    @RequestMapping("/addEvent", method = RequestMethod.POST)
+    @RequestMapping(value = "/addEvent", method = RequestMethod.POST)
     public void addEvent(final String eventName, final String eventLocation) {
         Event event = new Event();
         event.setEventName(eventName);

@@ -21,5 +21,4 @@ public enum MemberType {
     public String memberTypeCode() {
         return this.memberCode;
     }
-
 }

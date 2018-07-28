@@ -9,7 +9,7 @@ import java.util.Map;
 public class Event {
 
     @Id
-    public String id;
+    public int id;
 
     public String eventName;
     public String eventLocation;

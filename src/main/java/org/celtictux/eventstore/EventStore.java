@@ -38,7 +38,8 @@ public class EventStore {
         members.put(MemberType.FIRST_AIDER, 2);
 
         event.setEventRequirements(members);
-        repository.insert(event);
+        Event insert = repository.insert(event);
+        System.out.println("Inserted: " + insert.toString());
     }
 
 

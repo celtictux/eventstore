@@ -1,5 +1,6 @@
 package org.celtictux.eventstore;
 
+import org.celtictux.eventstore.util.EventIdGenerator;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -20,6 +21,11 @@ public class Application {
         return args -> {
 
         };
+    }
+
+    @Bean
+    public EventIdGenerator eventIdGenerator() {
+        return new EventIdGenerator();
     }
 
 }

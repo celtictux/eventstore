@@ -46,7 +46,7 @@ public class EventStore {
         System.out.println("Inserted: " + insert.toString());
     }
 
-    @RequestMapping(value = "/deleteAll", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/deleteAll", method = RequestMethod.GET)
     public void deleteAll() {
         repository.deleteAll();
     }
